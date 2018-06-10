@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Raleway");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Raleway";
+  font-size: 12pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 1em;
+  font-family: "Lobster";
+}
+
+.header {
+  background-color: #f7f7f7;
+}
+
+.game {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 2px;
+  padding: 1em;
+  justify-content: center;
+}
+.game .game__cell {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: #2C73D2;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.game .game__cell:hover {
+  background-color: #FF6F91;
+}
+
+/*# sourceMappingURL=mini.css.map */
