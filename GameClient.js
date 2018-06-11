@@ -4,6 +4,8 @@ class GameClient {
   constructor() {
     this.game = new Game(3);
     this.gameCells = document.getElementsByClassName("game__cell");
+    document.getElementsByClassName("game-event")[0].innerHTML =
+    `${this.game.currentMark()} is up!`;
   }
 
   addGameCellListener() {
@@ -31,10 +33,25 @@ class GameClient {
         this.game.play(Math.floor(i / 3), (i) % 3);
       }
     }
+    this.writeEvent();
+  }
+
+  writeEvent(){
+    let event=document.getElementsByClassName("game-event")[0];
+    if(this.game.winner){
+      if(this.game.winner==="draw"){
+        event.innerHTML = `$It's a ${this.game.winner}!`;
+      }else{
+        event.innerHTML = `${this.game.winner} has won!`;
+      }
+    }else{
+      event.innerHTML = `${this.game.currentMark()} is up!`;
+    }  
   }
 }
 
 window.onload = function main() {
   const gameClient = new GameClient();
   gameClient.addGameCellListener();
+
 };
