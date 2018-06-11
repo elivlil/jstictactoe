@@ -31,13 +31,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 100px;
   height: 100px;
   cursor: pointer;
-  background-color: #2C73D2;
+  background-color: #7B63B7;
   display: flex;
   align-content: center;
   justify-content: center;
 }
 .game .game__cell:hover {
-  background-color: #FF6F91;
+  background-color: #F59093;
 }
 
 /*# sourceMappingURL=mini.css.map */
