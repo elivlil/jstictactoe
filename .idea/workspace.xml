@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="281a77ac-02ee-4bd3-b7bc-a9a92975d6fa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/GameClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/GameClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini.css" beforeDir="false" afterPath="$PROJECT_DIR$/mini.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/mini.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mini.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mini.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/mini.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mini.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/mini.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mini.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/mini.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/tictactoe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/time.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +24,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="mini.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mini.scss">
+        <entry file="file://$PROJECT_DIR$/src/styles/mini.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
               <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
@@ -29,21 +32,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameClient.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GameClient.js">
+      <file leaf-file-name="GameClient.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/GameClient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state relative-caret-position="374">
+              <caret line="44" column="57" lean-forward="true" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
@@ -112,7 +110,12 @@
             <path>
               <item name="jsttt" type="b2602c69:ProjectViewProjectNode" />
               <item name="jsttt" type="462c0819:PsiDirectoryNode" />
-              <item name="mini.scss" type="620a8d5e:NestingTreeNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsttt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsttt" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -130,7 +133,13 @@
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/codex" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="file.status.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\212702412\_Development\tic\jsttt\src\styles" />
+      <recent name="C:\Users\212702412\_Development\tic\jsttt\src\logic" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -202,7 +211,7 @@
       <workItem from="1528787500802" duration="272000" />
       <workItem from="1528788175757" duration="2547000" />
       <workItem from="1528791928494" duration="86000" />
-      <workItem from="1528793027016" duration="3367000" />
+      <workItem from="1528793027016" duration="4433000" />
     </task>
     <task id="LOCAL-00001" summary="u-u">
       <created>1528787615022</created>
@@ -225,14 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1528788804050</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added reset button">
+      <created>1528797945397</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1528797945397</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8576000" />
+    <option name="totallyTimeSpent" value="9642000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="-2" width="1468" height="867" extended-state="6" />
+    <frame x="70" y="-2" width="1468" height="867" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -270,13 +286,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="u-u" />
     <MESSAGE value="Merge branch 'master' of https://gitlab.com/alettageczi/jsttt&#10;&#10;# Conflicts:&#10;#&#9;index.html&#10;#&#9;mini.css&#10;#&#9;mini.css.map&#10;#&#9;mini.scss" />
     <MESSAGE value="removed console game" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed console game" />
+    <MESSAGE value="added reset button" />
+    <option name="LAST_COMMIT_MESSAGE" value="added reset button" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mini.scss">
+    <entry file="file://$PROJECT_DIR$/src/styles/mini.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
           <caret line="73" selection-start-line="73" selection-end-line="73" />
@@ -290,7 +308,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mini.scss">
+    <entry file="file://$PROJECT_DIR$/src/styles/mini.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
           <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
@@ -304,13 +322,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameClient.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/GameClient.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/Game.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mini.scss">
+    <entry file="file://$PROJECT_DIR$/src/styles/mini.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
@@ -324,20 +342,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Board.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/Board.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameClient.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/GameClient.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/Game.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Board.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/Board.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
@@ -351,20 +369,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mini.scss">
+    <entry file="file://$PROJECT_DIR$/src/styles/mini.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameClient.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/GameClient.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/Game.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Board.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/Board.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
@@ -378,29 +396,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mini.scss">
+    <entry file="file://$PROJECT_DIR$/src/styles/mini.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tictactoe.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/tictactoe.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sb.js" />
     <entry file="file://$PROJECT_DIR$/client.js" />
-    <entry file="file://$PROJECT_DIR$/Game.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/Game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Board.js">
+    <entry file="file://$PROJECT_DIR$/src/logic/Board.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/mini.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/mini.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/GameClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="44" column="57" lean-forward="true" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -414,34 +456,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mini.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mini.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
         </state>
       </provider>
     </entry>
