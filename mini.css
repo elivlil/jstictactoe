@@ -18,25 +18,22 @@ h1, h2, h3, h4, h5, h6 {
 .body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 3rem 1fr;
+  grid-template-rows: auto 3rem 1fr 20vh 10vh;
   justify-content: center;
-}
-
-.timer {
-  display: flex;
-  justify-content: center;
-  padding: 1em;
+  overflow: hidden;
 }
 
 .header {
   display: flex;
   justify-content: center;
+  align-content: center;
   background-color: #f7f7f7;
 }
 
 .game-event {
   display: flex;
   justify-content: center;
+  align-content: center;
   padding: 1em;
 }
 
@@ -59,6 +56,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 .game .game__cell:hover {
   background-color: #F59093;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .timer {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+.footer .reset {
+  width: 7em;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #F59093;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+.footer .reset:hover {
+  background-color: #FFAE8F;
 }
 
 /*# sourceMappingURL=mini.css.map */

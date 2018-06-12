@@ -2,58 +2,87 @@
 @import 'variables';
 
 * {
-	box-sizing:border-box;
-	padding:0;
-	margin:0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-html{
-	font-family:"Raleway";
-	font-size:12pt;
+html {
+  font-family: "Raleway";
+  font-size: 12pt;
 }
 
-h1,h2,h3,h4,h5,h6{
-	padding:1em;
-	font-family:"Lobster";
+h1, h2, h3, h4, h5, h6 {
+  padding: 1em;
+  font-family: "Lobster";
 }
-.body{
-	display:grid;
-	grid-template-columns:1fr;
-	grid-template-rows: auto 3rem 1fr;
-	justify-content: center;
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 3rem 1fr 20vh 10vh;
+  justify-content: center;
+  overflow: hidden;
 }
-.timer{
-	display:flex;
-	justify-content:center;
-	padding:1em;
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: $color_smokeywhite;
 }
-.header{
-	display:flex;
-	justify-content:center;
-	background-color:$color_smokeywhite;
+
+.game-event {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
 }
-.game-event{
-	display:flex;
-	justify-content:center;
-	padding:1em;
+
+.game {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 2px;
+  padding: 1em;
+  justify-content: center;
+  .game__cell {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-color: $color_main;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    &:hover {
+      background-color: $color_asc1;
+    }
+  }
 }
-.game{
-	display: grid;
-	grid-template-rows: 100px 100px 100px;
-	grid-template-columns: 100px 100px 100px;
-	grid-gap:2px;
-	padding:1em;
-	justify-content:center;
-	.game__cell{
-		width: 100px;
-		height: 100px;
-		cursor: pointer;
-		background-color: $color_main;
-		display:flex;
-		align-content:center;
-		justify-content:center;
-		&:hover{
-		 background-color: $color_asc1;
-		}
-	}
+
+.footer{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  .timer {
+    height:20vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+  }
+  .reset{
+    width:7em;
+    padding:1em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color:$color-asc1;
+    border-radius:3px;
+    color:$color_white;
+    cursor: pointer;
+    &:hover{
+      background-color:$color-asc2;
+    }
+  }
 }

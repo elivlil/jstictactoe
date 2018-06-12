@@ -49,9 +49,14 @@ class GameClient {
     }  
   }
 }
+function createResetButton(){
+  let res = document.getElementsByClassName("reset")[0];
+  res.addEventListener("click", function(){location=location;});
+}
 
 window.onload = function main() {
   const gameClient = new GameClient();
   gameClient.addGameCellListener();
+  createResetButton();
 
 };
