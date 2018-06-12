@@ -8,7 +8,6 @@ class Board {
         this.board[i][j] = "-";
       }
     }
-    this.show();
   }
 
   searchWinner(x, y, mark) {
@@ -35,7 +34,6 @@ class Board {
         res += this.board[i][j] + " ";
       }
     }
-    console.log(res);
   }
 
   boardIsFull() {
