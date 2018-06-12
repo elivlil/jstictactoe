@@ -15,11 +15,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Lobster";
 }
 
-.header {
+.main .header {
   background-color: #f7f7f7;
 }
-
-.game {
+.main .game {
   display: grid;
   grid-template-rows: 100px 100px 100px;
   grid-template-columns: 100px 100px 100px;
@@ -27,16 +26,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1em;
   justify-content: center;
 }
-.game .game__cell {
+.main .game .game__cell {
   width: 100px;
   height: 100px;
   cursor: pointer;
   background-color: #7B63B7;
-  display: flex;
-  align-content: center;
-  justify-content: center;
 }
-.game .game__cell:hover {
+.main .game .game__cell:hover {
   background-color: #F59093;
 }
 
