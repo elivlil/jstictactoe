@@ -1,0 +1,35 @@
+{
+  "name": "mytictactoe",
+  "version": "1.0.0",
+  "description": "Javascript tictactoe made by Aletta Geczi",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/alettageczi/jsttt.git"
+  },
+  "keywords": [
+    "tictactoe"
+  ],
+  "author": "Aletta Geczi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/alettageczi/jsttt/issues"
+  },
+  "homepage": "https://gitlab.com/alettageczi/jsttt#README",
+  "dependencies": {
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^1.1.2",
+    "karma-jasmine-html-reporter": "^1.1.0"
+  },
+  "devDependencies": {
+    "jasmine": "^3.1.0",
+    "karma": "^2.0.2"
+  }
+}
