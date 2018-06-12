@@ -1,11 +1,11 @@
 class Board {
   constructor(size) {
     this.size = size;
-    this.board = [];
-    while (size--) this.board.push([]);
+    this.boardArray = [];
+    while (size--) this.boardArray.push([]);
     for (let i = 0; i < this.size; i++) {
       for (let j = 0; j < this.size; j++) {
-        this.board[i][j] = "-";
+        this.boardArray[i][j] = "-";
       }
     }
   }
@@ -23,23 +23,13 @@ class Board {
   }
 
   put(x, y, mark) {
-    this.board[x][y] = mark;
-  }
-
-  show() {
-    let res = "";
-    for (let i = 0; i < this.size; i++) {
-      res += "\n\t ";
-      for (let j = 0; j < this.size; j++) {
-        res += this.board[i][j] + " ";
-      }
-    }
+    this.boardArray[x][y] = mark;
   }
 
   boardIsFull() {
     for (let i = 0; i < this.size; i++) {
       for (let j = 0; j < this.size; j++) {
-        if (this.board[i][j] === "-") return false;
+        if (this.boardArray[i][j] === "-") return false;
       }
     }
     return true;
@@ -48,7 +38,7 @@ class Board {
   checkRowOfArray(x, mark) {
     let i = this.size;
     while (i--) {
-      if (this.board[x][i] !== mark) return null;
+      if (this.boardArray[x][i] !== mark) return null;
     }
     return mark;
   }
@@ -56,7 +46,7 @@ class Board {
   checkColumnOfArray(y, mark) {
     let i = this.size;
     while (i--) {
-      if (this.board[i][y] !== mark) return null;
+      if (this.boardArray[i][y] !== mark) return null;
     }
     return mark;
   }
@@ -64,7 +54,7 @@ class Board {
   checkLeftDiagonalOfArray(mark) {
     let i = this.size;
     while (i--) {
-      if (this.board[i][i] !== mark) return null;
+      if (this.boardArray[i][i] !== mark) return null;
     }
     return mark;
   }
@@ -72,7 +62,7 @@ class Board {
   checkRightDiagonalOfArray(mark) {
     let i = this.size;
     while (i--) {
-      if (this.board[this.size - 1 - i][i] !== mark) return null;
+      if (this.boardArray[this.size - 1 - i][i] !== mark) return null;
     }
     return mark;
   }

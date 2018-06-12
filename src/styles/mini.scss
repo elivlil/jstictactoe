@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Raleway');
-@import '../../variables';
+@import 'variables';
 
 * {
   box-sizing: border-box;
@@ -77,12 +77,12 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color:$color-asc1;
+    background: $color_grey7;
     border-radius:3px;
     color:$color_white;
     cursor: pointer;
     &:hover{
-      background-color:$color-asc2;
+      background-color:$color-asc1;
     }
   }
 }

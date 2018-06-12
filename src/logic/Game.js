@@ -20,7 +20,7 @@ class Game {
   }
 
   isValidPosition(x, y) {
-    return (x < this.board.size && y < this.board.size && 0 <= x && 0 <= y && this.board.board[x][y] === "-");
+    return (x < this.board.size && y < this.board.size && 0 <= x && 0 <= y && this.board.boardArray[x][y] === "-");
   }
 }
 
