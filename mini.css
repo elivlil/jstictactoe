@@ -15,10 +15,32 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Lobster";
 }
 
-.main .header {
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 3rem 1fr;
+  justify-content: center;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
   background-color: #f7f7f7;
 }
-.main .game {
+
+.game-event {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.game {
   display: grid;
   grid-template-rows: 100px 100px 100px;
   grid-template-columns: 100px 100px 100px;
@@ -26,13 +48,16 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1em;
   justify-content: center;
 }
-.main .game .game__cell {
+.game .game__cell {
   width: 100px;
   height: 100px;
   cursor: pointer;
   background-color: #7B63B7;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
-.main .game .game__cell:hover {
+.game .game__cell:hover {
   background-color: #F59093;
 }
 
