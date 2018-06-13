@@ -23,12 +23,19 @@ class Board {
   }
 
   put(x, y, mark) {
-    this.boardArray[x][y] = mark;
+    if(this.isValidPosition(x, y)){
+      this.boardArray[x][y] = mark;
+    }
+  }
+
+  isValidPosition(x, y) {
+    return (x < this.size && y < this.size && 0 <= x && 0 <= y && this.boardArray[x][y] === "-");
   }
 
   boardIsFull() {
     for (let i = 0; i < this.size; i++) {
       for (let j = 0; j < this.size; j++) {
+        //TODO refactor this with contains
         if (this.boardArray[i][j] === "-") return false;
       }
     }

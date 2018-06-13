@@ -70,18 +70,31 @@ h1, h2, h3, h4, h5, h6 {
   align-content: center;
   padding: 1em;
 }
-.footer .reset {
+.footer .button-holder .new-round {
+  display: block;
   width: 7em;
   padding: 1em;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  margin: 1px;
+  text-align: center;
   background: #777;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
 }
-.footer .reset:hover {
+.footer .button-holder .new-round:hover {
+  background-color: #08a5e1;
+}
+.footer .button-holder .reset {
+  width: 7em;
+  padding: 1em;
+  margin: 1px;
+  text-align: center;
+  background: #777;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+.footer .button-holder .reset:hover {
   background-color: #08a5e1;
 }
 
