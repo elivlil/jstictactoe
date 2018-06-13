@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Tue Jun 12 2018 14:11:04 GMT+0200 (Central Europe Daylight Time)
+// Generated on Tue Jun 12 2018 12:03:17 GMT+0200 (Central Europe Daylight Time)
 
 module.exports = function(config) {
   config.set({
@@ -11,17 +11,20 @@ module.exports = function(config) {
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
+    client: {
+      clearContext: false
+    },
 
 
     // list of files / patterns to load in the browser
     files: [
-      'src/logic/*.js'
+      'src/js/logic/*.js',
+      'test/logic/**/*.spec.js'
     ],
 
 
     // list of files / patterns to exclude
     exclude: [
-      'test/logic/**/*.spec.js'
     ],
 
 
@@ -34,7 +37,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['dots','kjhtml'],
 
 
     // web server port
@@ -51,7 +54,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
 
     // start these browsers
@@ -61,7 +64,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
