@@ -1,30 +1,41 @@
 class GameClient {
   constructor() {
-    this.timer = new Timer();
+    this.playerx = new Player('Xerxes', "x");
+    this.playero = new Player('Odin', "o");
     this.game = new Game(3);
+    this.timer = new Timer();
     this.gameCells = document.getElementsByClassName("game__cell");
-    document.getElementsByClassName("game-event")[0].innerHTML =
-    `${this.game.currentMark()} is up!`;
+    this.gameEvent = document.getElementsByClassName("game-event")[0];
+    this.gameScore = document.getElementsByClassName("score")[0];
+    this.gameEvent.innerHTML = `${this.playerx.name} is up!`;
+    this.gameScore.innerHTML =
+      `<p>${this.playerx.name}: ${this.playerx.score}</p>
+       <p>${this.playero.name}: ${this.playero.score}</p>`;
+  }
+
+  addReplayListener() {
+    let replayButton = document.getElementsByClassName("new-round")[0];
+    replayButton.addEventListener("click", () =>  this.startNewGame());
   }
 
   addGameCellListener() {
     for (let i = 0; i < this.gameCells.length; i++) {
-      //TODO remove i and use target
-      this.gameCells[i].addEventListener("click", (event) => this.putMark(i, event.currentTarget));
+      this.gameCells[i].addEventListener("click", (event) => this.putMark(event.currentTarget));
     }
   }
 
-  putMark(i, target) {
+  putMark(target) {
+    this.checkGameStatus();
     let row = target.dataset.row;
     let col = target.dataset.col;
-    if (this.game.board.isValidPosition(row, col) && this.game.round>-1) {
+    if (this.game.board.isValidPosition(row, col) && this.game.round > -1) {
       if (this.game.currentMark() === "o") {
         target.innerHTML =
           `<svg>
           <circle cx="50" cy="50" r="40" stroke="#fff" fill="transparent" stroke-width="3"/>
           </svg>`;
         this.game.play(row, col);
-      }else{
+      } else {
         target.innerHTML =
           `<svg>
           <line x1="20" x2="80" y1="20" y2="80" stroke="#fff" stroke-width="3"/>
@@ -36,18 +47,61 @@ class GameClient {
     this.writeEvent();
   }
 
-  writeEvent(){
-    let event=document.getElementsByClassName("game-event")[0];
-    if(this.game.winner){
+  writeEvent() {
+    if (this.game.winner) {
       this.timer.stopTimer();
-      if(this.game.winner==="draw"){
-        event.innerHTML = `It's a ${this.game.winner}!`;
-      }else{
-        event.innerHTML = `${this.game.winner} has won!`;
+      if (this.game.winner === "draw") {
+        this.gameEvent.innerHTML = `It's a ${this.game.winner}!`;
+      } else {
+        let name = this.getPlayerNameMatchingTheMark(this.game.winner);
+        this.gameEvent.innerHTML = `${name} has won!`;
+        this.increaseWinnersScore();
       }
-    }else{
-      event.innerHTML = `${this.game.currentMark()} is up!`;
-    }  
+    } else {
+      let name = this.getPlayerNameMatchingTheMark(this.game.currentMark());
+      this.gameEvent.innerHTML = `${name} is up!`;
+    }
   }
 
+  getPlayerNameMatchingTheMark(mark) {
+    if (mark === "x") {
+      return this.playerx.name
+    }
+    {
+      return this.playero.name;
+    }
+  }
+
+  checkGameStatus() {
+    if (this.timer.status === "OFF") {
+      throw new Error("New match has not started yet");
+    }
+  }
+
+  startNewGame() {
+    this.clearBoard();
+    this.game = new Game(3);
+    this.timer = new Timer();
+    this.gameEvent.innerHTML = `${this.playerx.name} is up!`;
+  }
+
+  increaseWinnersScore() {
+    if (this.game.winner === "x") {
+      this.playerx.score++;
+    } else if (this.game.winner === "o") {
+      this.playero.score++;
+    }
+    this.upDateScore();
+  }
+  upDateScore(){
+    this.gameScore.innerHTML =
+      `<p>${this.playerx.name}: ${this.playerx.score}</p>
+       <p>${this.playero.name}: ${this.playero.score}</p>`;
+  }
+
+  clearBoard() {
+    for (let i = 0; i < this.gameCells.length; i++) {
+      this.gameCells[i].innerHTML = '';
+    }
+  }
 }

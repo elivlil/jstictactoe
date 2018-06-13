@@ -70,6 +70,10 @@ h1, h2, h3, h4, h5, h6 {
   align-content: center;
   padding: 1em;
 }
+.footer .score {
+  height: 20vh;
+  padding: 1em;
+}
 .footer .button-holder .new-round {
   display: block;
   width: 7em;
@@ -87,7 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 .footer .button-holder .reset {
   width: 7em;
   padding: 1em;
-  margin: 1px;
   text-align: center;
   background: #777;
   border-radius: 3px;

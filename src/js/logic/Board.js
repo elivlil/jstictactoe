@@ -2,11 +2,21 @@ class Board {
   constructor(size) {
     this.size = size;
     this.boardArray = [];
+
     while (size--) this.boardArray.push([]);
     for (let i = 0; i < this.size; i++) {
       for (let j = 0; j < this.size; j++) {
         this.boardArray[i][j] = "-";
       }
+    }
+  }
+
+  put(x, y, mark) {
+    if(this.isValidPosition(x, y)){
+      this.boardArray[x][y] = mark;
+      return this.searchWinner(x, y, mark);
+    }else{
+      throw new Error("Invalid position");
     }
   }
 
@@ -20,12 +30,6 @@ class Board {
       return "draw";
     }
     return null;
-  }
-
-  put(x, y, mark) {
-    if(this.isValidPosition(x, y)){
-      this.boardArray[x][y] = mark;
-    }
   }
 
   isValidPosition(x, y) {
