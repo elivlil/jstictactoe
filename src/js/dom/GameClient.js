@@ -84,6 +84,11 @@ class GameClient {
     this.timer = new Timer();
     this.gameEvent.innerHTML = `${this.playerx.name} is up!`;
   }
+  clearBoard() {
+    for (let i = 0; i < this.gameCells.length; i++) {
+      this.gameCells[i].innerHTML = '';
+    }
+  }
 
   increaseWinnersScore() {
     if (this.game.winner === "x") {
@@ -99,9 +104,4 @@ class GameClient {
        <p>${this.playero.name}: ${this.playero.score}</p>`;
   }
 
-  clearBoard() {
-    for (let i = 0; i < this.gameCells.length; i++) {
-      this.gameCells[i].innerHTML = '';
-    }
-  }
 }
