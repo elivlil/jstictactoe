@@ -32,23 +32,25 @@ class GameClient {
     try {
       let mark = this.game.currentMark();
       this.game.play(row, col);
-      if (mark === "o") {
-        target.innerHTML =
-          `<svg>
-          <circle cx="50" cy="50" r="40" stroke="#fff" fill="transparent" stroke-width="3"/>
-          </svg>`;
-
-      } else {
-        target.innerHTML =
-          `<svg>
-          <line x1="20" x2="80" y1="20" y2="80" stroke="#fff" stroke-width="3"/>
-          <line x1="80" x2="20" y1="20" y2="80" stroke="#fff" stroke-width="3"/>
-          </svg>`;
-      }
+      this.drawMarkInCell(target,mark);
     } catch (e) {
       console.log('The game has ended.');
     }
     this.writeEvent();
+  }
+  drawMarkInCell(target,mark){
+    if (mark === "o") {
+      target.innerHTML =
+        `<svg>
+          <circle cx="50" cy="50" r="40" stroke="#fff" fill="transparent" stroke-width="3"/>
+          </svg>`;
+    } else {
+      target.innerHTML =
+        `<svg>
+          <line x1="20" x2="80" y1="20" y2="80" stroke="#fff" stroke-width="3"/>
+          <line x1="80" x2="20" y1="20" y2="80" stroke="#fff" stroke-width="3"/>
+          </svg>`;
+    }
   }
 
   writeEvent() {
