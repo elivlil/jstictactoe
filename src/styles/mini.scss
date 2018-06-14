@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Raleway:400,700');
 @import 'variables';
 
 * {
@@ -18,37 +18,54 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 3rem 1fr 20vh 10vh;
-  justify-content: center;
-  overflow: hidden;
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 6rem 4rem 1fr 6rem ;
+grid-template:"h h h" "s e t" "g g g" "b b b";
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+width:100%;
+grid-area: h;
+display:flex;
+justify-content:center;
+align-content:center;
   background-color: $color_smokeywhite;
 }
-
+.timer {
+grid-area: t;
+display:flex;
+justify-content:center;
+align-content:center;
+  padding: 1em;
+}
 .game-event {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+grid-area: e;
+display:flex;
+justify-content:center;
+align-content:center;
+  padding: 1em;
+}
+.score {
+grid-area: s;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-content:center;
   padding: 1em;
 }
 
 .game {
+grid-area: g;
   display: grid;
-  grid-template-rows: 100px 100px 100px;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: $width_cell $width_cell $width_cell;
+  grid-template-columns: $width_cell $width_cell $width_cell;
   grid-gap: 2px;
   padding: 1em;
   justify-content: center;
   .game__cell {
-    width: 100px;
-    height: 100px;
+    width: $width_cell;
+    height: $width_cell;
     cursor: pointer;
     background-color: $color_main;
     display: flex;
@@ -60,27 +77,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.footer{
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-  .timer {
-    height:20vh;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 1em;
-  }
-  .score {
-    height:20vh;
-    padding: 1em;
-  }
   .button-holder{
+  grid-area: b;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
     .new-round{
-      display: block;
       width:7em;
       padding:1em;
-      margin:1px;
       text-align:center;
       background: $color_grey7;
       border-radius:3px;
@@ -103,4 +107,3 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
-}

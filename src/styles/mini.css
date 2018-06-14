@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lobster|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Lobster|Raleway:400,700");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -17,27 +17,47 @@ h1, h2, h3, h4, h5, h6 {
 
 .body {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 3rem 1fr 20vh 10vh;
-  justify-content: center;
-  overflow: hidden;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 6rem 4rem 1fr 6rem;
+  grid-template: "h h h" "s e t" "g g g" "b b b";
 }
 
 .header {
+  width: 100%;
+  grid-area: h;
   display: flex;
   justify-content: center;
   align-content: center;
   background-color: #f7f7f7;
 }
 
-.game-event {
+.timer {
+  grid-area: t;
   display: flex;
   justify-content: center;
   align-content: center;
   padding: 1em;
 }
 
+.game-event {
+  grid-area: e;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+
+.score {
+  grid-area: s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+
 .game {
+  grid-area: g;
   display: grid;
   grid-template-rows: 100px 100px 100px;
   grid-template-columns: 100px 100px 100px;
@@ -58,37 +78,25 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #08a5e1;
 }
 
-.footer {
+.button-holder {
+  grid-area: b;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.footer .timer {
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  padding: 1em;
-}
-.footer .score {
-  height: 20vh;
-  padding: 1em;
-}
-.footer .button-holder .new-round {
-  display: block;
+.button-holder .new-round {
   width: 7em;
   padding: 1em;
-  margin: 1px;
   text-align: center;
   background: #777;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
 }
-.footer .button-holder .new-round:hover {
+.button-holder .new-round:hover {
   background-color: #08a5e1;
 }
-.footer .button-holder .reset {
+.button-holder .reset {
   width: 7em;
   padding: 1em;
   text-align: center;
@@ -97,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   cursor: pointer;
 }
-.footer .button-holder .reset:hover {
+.button-holder .reset:hover {
   background-color: #08a5e1;
 }
 

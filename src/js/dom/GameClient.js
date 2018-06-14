@@ -7,10 +7,11 @@ class GameClient {
     this.gameCells = document.getElementsByClassName("game__cell");
     this.gameEvent = document.getElementsByClassName("game-event")[0];
     this.gameScore = document.getElementsByClassName("score")[0];
+    
     this.gameEvent.innerHTML = `${this.playerx.name} is up!`;
     this.gameScore.innerHTML =
-      `<p>${this.playerx.name}: ${this.playerx.score}</p>
-       <p>${this.playero.name}: ${this.playero.score}</p>`;
+      `<p><strong>${this.playerx.name}:</strong> ${this.playerx.score}</p>
+       <p><strong>${this.playero.name}:</strong> ${this.playero.score}</p>`;
   }
 
   addReplayListener() {
@@ -100,8 +101,8 @@ class GameClient {
   }
   upDateScore(){
     this.gameScore.innerHTML =
-      `<p>${this.playerx.name}: ${this.playerx.score}</p>
-       <p>${this.playero.name}: ${this.playero.score}</p>`;
+      `<p><strong>${this.playerx.name}</strong>: ${this.playerx.score}</p>
+       <p><strong>${this.playero.name}</strong>: ${this.playero.score}</p>`;
   }
 
 }
