@@ -20,8 +20,8 @@ h1, h2, h3, h4, h5, h6 {
 .body {
 display:grid;
 grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 6rem 4rem 1fr 6rem ;
-grid-template:"h h h" "s e t" "g g g" "b b b";
+grid-template-rows:2rem 2rem 3rem 1fr 4rem ;
+grid-template:"control control control" "h h h" "s e t" "g g g" "b b b";
 }
 
 .header {
@@ -83,8 +83,9 @@ grid-area: g;
   flex-direction:row;
   justify-content:space-around;
     .new-round{
-      width:7em;
-      padding:1em;
+      width:6rem;
+      height:2rem;
+      padding:1rem;
       text-align:center;
       background: $color_grey7;
       border-radius:3px;
@@ -95,7 +96,8 @@ grid-area: g;
       }
     }
     .reset{
-      width:7em;
+      width:6rem;
+      height:2rem;
       padding:1em;
       text-align:center;
       background: $color_grey7;
@@ -107,3 +109,20 @@ grid-area: g;
       }
     }
   }
+
+.title-bar {
+grid-area:control;
+display:flex;
+justify-content:flex-end;
+ -webkit-app-region: drag; 
+ background-color: $color-black3;
+ .close-btn {
+font-size:2rem;
+ -webkit-app-region: no-drag;
+width:2rem;
+ cursor:pointer;
+ &:hover{
+ color:$color-white;
+ }
+}
+}

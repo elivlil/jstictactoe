@@ -4,3 +4,8 @@ function createResetButton() {
     location = location;
   });
 }
+
+function addWindowCloseListener(){
+	let closebtn = document.getElementsByClassName("close-btn")[0];
+	closebtn.addEventListener("click", () => window.close());
+}
