@@ -7,7 +7,7 @@ class GameClient {
     this.gameCells = document.getElementsByClassName("game__cell");
     this.gameEvent = document.getElementsByClassName("game-event")[0];
     this.gameScore = document.getElementsByClassName("score")[0];
-    
+
     this.gameEvent.innerHTML = `${this.playerx.name} is up!`;
     this.gameScore.innerHTML =
       `<p><strong>${this.playerx.name}:</strong> ${this.playerx.score}</p>
@@ -16,7 +16,7 @@ class GameClient {
 
   addReplayListener() {
     let replayButton = document.getElementsByClassName("new-round")[0];
-    replayButton.addEventListener("click", () =>  this.startNewGame());
+    replayButton.addEventListener("click", () => this.startNewGame());
   }
 
   addGameCellListener() {
@@ -29,21 +29,24 @@ class GameClient {
     this.checkGameStatus();
     let row = target.dataset.row;
     let col = target.dataset.col;
-    if (this.game.board.isValidPosition(row, col) && this.game.round > -1) {
-      if (this.game.currentMark() === "o") {
+    try {
+      let mark = this.game.currentMark();
+      this.game.play(row, col);
+      if (mark === "o") {
         target.innerHTML =
           `<svg>
           <circle cx="50" cy="50" r="40" stroke="#fff" fill="transparent" stroke-width="3"/>
           </svg>`;
-        this.game.play(row, col);
+
       } else {
         target.innerHTML =
           `<svg>
           <line x1="20" x2="80" y1="20" y2="80" stroke="#fff" stroke-width="3"/>
           <line x1="80" x2="20" y1="20" y2="80" stroke="#fff" stroke-width="3"/>
           </svg>`;
-        this.game.play(row, col);
       }
+    } catch (e) {
+      console.log('The game has ended.');
     }
     this.writeEvent();
   }
@@ -85,6 +88,7 @@ class GameClient {
     this.timer = new Timer();
     this.gameEvent.innerHTML = `${this.playerx.name} is up!`;
   }
+
   clearBoard() {
     for (let i = 0; i < this.gameCells.length; i++) {
       this.gameCells[i].innerHTML = '';
@@ -99,7 +103,8 @@ class GameClient {
     }
     this.upDateScore();
   }
-  upDateScore(){
+
+  upDateScore() {
     this.gameScore.innerHTML =
       `<p><strong>${this.playerx.name}</strong>: ${this.playerx.score}</p>
        <p><strong>${this.playero.name}</strong>: ${this.playero.score}</p>`;

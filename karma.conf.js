@@ -31,13 +31,19 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'src/js/logic/*.js': 'coverage'
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['dots','kjhtml'],
+    reporters: ['dots', 'coverage'],
+
+    coverageReporter : {
+      type : 'text',
+      dir : 'coverage/'
+    },
 
 
     // web server port

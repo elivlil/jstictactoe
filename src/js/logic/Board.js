@@ -2,7 +2,6 @@ class Board {
   constructor(size) {
     this.size = size;
     this.boardArray = [];
-
     while (size--) this.boardArray.push([]);
     for (let i = 0; i < this.size; i++) {
       for (let j = 0; j < this.size; j++) {
@@ -12,12 +11,16 @@ class Board {
   }
 
   put(x, y, mark) {
-    if(this.isValidPosition(x, y)){
+    if (this.isValidPosition(x, y)) {
       this.boardArray[x][y] = mark;
       return this.searchWinner(x, y, mark);
-    }else{
+    } else {
       throw new Error("Invalid position");
     }
+  }
+
+  isValidPosition(x, y) {
+    return (x < this.size && y < this.size && 0 <= x && 0 <= y && this.boardArray[x][y] === "-");
   }
 
   searchWinner(x, y, mark) {
@@ -32,49 +35,55 @@ class Board {
     return null;
   }
 
-  isValidPosition(x, y) {
-    return (x < this.size && y < this.size && 0 <= x && 0 <= y && this.boardArray[x][y] === "-");
-  }
-
   boardIsFull() {
-    for (let i = 0; i < this.size; i++) {
-      for (let j = 0; j < this.size; j++) {
-        //TODO refactor this with contains
-        if (this.boardArray[i][j] === "-") return false;
-      }
-    }
-    return true;
+    return !(this.boardArray.join().includes("-"));
   }
 
   checkRowOfArray(x, mark) {
     let i = this.size;
     while (i--) {
-      if (this.boardArray[x][i] !== mark) return null;
+      if (this.boardArray[x][i] !== mark) return false;
     }
-    return mark;
+    return true;
   }
 
   checkColumnOfArray(y, mark) {
     let i = this.size;
     while (i--) {
-      if (this.boardArray[i][y] !== mark) return null;
+      if (this.boardArray[i][y] !== mark) return false;
     }
-    return mark;
+    return true;
   }
 
   checkLeftDiagonalOfArray(mark) {
     let i = this.size;
     while (i--) {
-      if (this.boardArray[i][i] !== mark) return null;
+      if (this.boardArray[i][i] !== mark) return false;
     }
-    return mark;
+    return true;
   }
 
   checkRightDiagonalOfArray(mark) {
     let i = this.size;
     while (i--) {
-      if (this.boardArray[this.size - 1 - i][i] !== mark) return null;
+      if (this.boardArray[this.size - 1 - i][i] !== mark) return false;
     }
-    return mark;
+    return true;
+  }
+
+  * getRows() {
+    let i = 0;
+    for (let row of this.boardArray) {
+      yield {data: row, index: i++, type: 'row'}
+    }
+  }
+
+  * getCols() {
+    let col = 0;
+    let row = [];
+    for (let i = 0; i < this.size; i++) {
+      row.push(this.boardArray[i][col]);
+    }
+    yield {data: row, index: col++, type: 'col'};
   }
 }

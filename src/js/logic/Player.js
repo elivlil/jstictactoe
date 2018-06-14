@@ -1,22 +1,20 @@
-class Player{
-  constructor(name, mark){
+class Player {
+  constructor(name, mark) {
     this.name = name;
     this.mark = mark;
     this.score = 0;
   }
 
-  increaseScore(){
+  increaseScore() {
     this.score++;
   }
 
-  setName(name){
+  setName(name) {
     this.name = name;
   }
-  setMark(mark){
+
+  setMark(mark) {
     this.name = mark;
   }
 
-  resetScore(){
-    this.score=0;
-  }
 }

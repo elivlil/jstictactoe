@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx karma start",
     "testonce": "npx karma start --single-run",
-    "mintest": "npx karma start --reporters=min --single-run"
+    "mintest": "npx karma start --reporters=min --single-run",
+    "mintestwithcov": "npx karma start --reporters=coverage,min --single-run"
   },
   "repository": {
     "type": "git",

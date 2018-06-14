@@ -10,10 +10,10 @@ class Game {
   }
 
   play(x, y) {
-    if (this.round>-1) {
+    if (this.round > -1) {
       this.winner = this.board.put(x, y, this.currentMark());
       (this.winner) ? this.round = -1 : this.round++;
-    }else{
+    } else {
       throw new Error("Game ended");
     }
   }
