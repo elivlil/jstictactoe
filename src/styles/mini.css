@@ -18,8 +18,8 @@ h1, h2, h3, h4, h5, h6 {
 .body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 6rem 4rem 1fr 6rem;
-  grid-template: "h h h" "s e t" "g g g" "b b b";
+  grid-template-rows: 2rem 2rem 3rem 1fr 4rem;
+  grid-template: "control control control" "h h h" "s e t" "g g g" "b b b";
 }
 
 .header {
@@ -85,8 +85,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-around;
 }
 .button-holder .new-round {
-  width: 7em;
-  padding: 1em;
+  width: 6rem;
+  height: 2rem;
+  padding: 1rem;
   text-align: center;
   background: #777;
   border-radius: 3px;
@@ -97,7 +98,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #08a5e1;
 }
 .button-holder .reset {
-  width: 7em;
+  width: 6rem;
+  height: 2rem;
   padding: 1em;
   text-align: center;
   background: #777;
@@ -107,6 +109,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 .button-holder .reset:hover {
   background-color: #08a5e1;
+}
+
+.title-bar {
+  grid-area: control;
+  display: flex;
+  justify-content: flex-end;
+  -webkit-app-region: drag;
+  background-color: #333;
+}
+.title-bar .close-btn {
+  font-size: 2rem;
+  -webkit-app-region: no-drag;
+  width: 2rem;
+  cursor: pointer;
+}
+.title-bar .close-btn:hover {
+  color: #fff;
 }
 
 /*# sourceMappingURL=mini.css.map */

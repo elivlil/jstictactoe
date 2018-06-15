@@ -2,8 +2,9 @@
   "name": "mytictactoe",
   "version": "1.0.0",
   "description": "Class project, tictactoe implementation",
-  "main": "index.js",
+  "main": "electron-main.js",
   "scripts": {
+    "start": "electron .",
     "test": "npx karma start",
     "testonce": "npx karma start --single-run",
     "mintest": "npx karma start --reporters=min --single-run",
@@ -24,6 +25,7 @@
   "homepage": "https://gitlab.com/alettageczi/jsttt#README",
   "dependencies": {},
   "devDependencies": {
+    "electron": "^2.0.0",
     "eslint": "^4.19.1",
     "jasmine": "^3.1.0",
     "karma": "^2.0.2",
