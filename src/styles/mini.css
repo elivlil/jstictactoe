@@ -8,18 +8,20 @@
 html {
   font-family: "Raleway";
   font-size: 12pt;
+  color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
   padding: 1em;
   font-family: "Lobster";
+  color: #111;
 }
 
 .body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 2rem 2rem 3rem 1fr 4rem;
-  grid-template: "control control control" "h h h" "s e t" "g g g" "b b b";
+  grid-template-rows: auto 3rem 1fr 4rem;
+  grid-template: "h h h" "s e t" "g g g" "b b b";
 }
 
 .header {
@@ -28,7 +30,21 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-content: center;
-  background-color: #f7f7f7;
+  background-color: #eee;
+  -webkit-app-region: drag;
+}
+.header .close-btn {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  -webkit-app-region: no-drag;
+  width: 2rem;
+  cursor: pointer;
+}
+.header .close-btn:hover {
+  color: #08a5e1;
 }
 
 .timer {
@@ -69,13 +85,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 100px;
   height: 100px;
   cursor: pointer;
-  background-color: #005cb9;
+  background-color: #845EC2;
   display: flex;
   align-content: center;
   justify-content: center;
 }
 .game .game__cell:hover {
-  background-color: #08a5e1;
+  background-color: #B769AE;
 }
 
 .button-holder {
@@ -84,48 +100,19 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   justify-content: space-around;
 }
-.button-holder .new-round {
+.button-holder .new-round, .button-holder .reset {
   width: 6rem;
-  height: 2rem;
+  height: 3rem;
   padding: 1rem;
   text-align: center;
-  background: #777;
+  background: #eee;
   border-radius: 3px;
-  color: #fff;
+  color: #333;
   cursor: pointer;
 }
-.button-holder .new-round:hover {
+.button-holder .new-round:hover, .button-holder .reset:hover {
   background-color: #08a5e1;
-}
-.button-holder .reset {
-  width: 6rem;
-  height: 2rem;
-  padding: 1em;
-  text-align: center;
-  background: #777;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-}
-.button-holder .reset:hover {
-  background-color: #08a5e1;
-}
-
-.title-bar {
-  grid-area: control;
-  display: flex;
-  justify-content: flex-end;
-  -webkit-app-region: drag;
-  background-color: #333;
-}
-.title-bar .close-btn {
-  font-size: 2rem;
-  -webkit-app-region: no-drag;
-  width: 2rem;
-  cursor: pointer;
-}
-.title-bar .close-btn:hover {
-  color: #fff;
+  color: #f7f7f7;
 }
 
 /*# sourceMappingURL=mini.css.map */

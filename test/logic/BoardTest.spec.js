@@ -178,4 +178,23 @@ describe('Board:', () => {
       expect(next.done).toBe(false);
     });
   });
+  describe('*getEmptyPositions()', () => {
+    it('should yield Position objects where there is an empty cell on the board', () => {
+      board.put(0,0,"x");board.put(0,1,"o");
+      board.put(1,1,"x");board.put(2,2,"o");
+      board.put(1,2,"x");
+      let expectedOutput =[
+        new Position(0,2),
+        new Position(1,0),
+        new Position(2,0),
+        new Position(2,1),
+      ]
+      let iterator = board.getEmptyPositions();
+      for(let e of expectedOutput) {
+        let f=iterator.next().value;
+        console.log(f);
+        expect(f).toEqual(e);
+      }
+    });
+  });
 })
