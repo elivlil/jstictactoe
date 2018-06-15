@@ -86,4 +86,14 @@ class Board {
     }
     yield {data: row, index: col++, type: 'col'};
   }
+
+  *getEmptyPositions() {
+    let array = this.boardArray.join().split(",");
+    let i = 0;
+    while (array.indexOf('-', i) >= 0) {
+      let index = array.indexOf('-', i);
+      yield new Position(Math.floor(index / 3), index % 3);
+      i = index+1;
+    }
+  }
 }

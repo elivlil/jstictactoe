@@ -1,3 +1,10 @@
+class Position {
+  constructor(row, col) {
+    this.row = row;
+    this.col = col;
+  }
+}
+
 class Game {
   constructor(size) {
     this.board = new Board(size);
@@ -17,6 +24,15 @@ class Game {
       throw new Error("Game ended");
     }
   }
+
+  copy(){
+    let gameCopy = new Game(this.size);
+    let boardCopy;
+    this.board.boardArray.forEach((e)=>{boardCopy.push([...e])});
+    gameCopy.round=this.round;
+    gameCopy.board.boardArray=boardCopy;
+  }
+
 }
 
 

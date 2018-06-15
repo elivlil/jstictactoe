@@ -1,7 +1,7 @@
 class GameClient {
   constructor() {
-    this.playerx = new Player('Xerxes', "x");
-    this.playero = new Player('Odin', "o");
+    this.playerx = new Player('Player', "x");
+    this.playero = new Player('AI', "o");
     this.game = new Game(3);
     this.timer = new Timer();
     this.gameCells = document.getElementsByClassName("game__cell");
@@ -26,20 +26,26 @@ class GameClient {
   }
 
   putMark(target) {
-    if(this.checkGameStatus()){
+    if (this.checkGameStatus()) {
       let row = target.dataset.row;
       let col = target.dataset.col;
       try {
         let mark = this.game.currentMark();
+        if (mark === "x") {
+          console.log("Ai should do something", mark);
+        } else {
+          console.log("Player should do something", mark);
+        }
         this.game.play(row, col);
-        this.drawMarkInCell(target,mark);
+        this.drawMarkInCell(target, mark);
       } catch (e) {
         console.log("Game ended");
       }
       this.writeEvent();
     }
   }
-  drawMarkInCell(target,mark){
+
+  drawMarkInCell(target, mark) {
     if (mark === "o") {
       target.innerHTML =
         `<svg>
@@ -84,7 +90,7 @@ class GameClient {
   }
 
   startNewGame() {
-    if(!this.checkGameStatus()){
+    if (!this.checkGameStatus()) {
       this.clearBoard();
       this.game = new Game(3);
       this.timer = new Timer();
