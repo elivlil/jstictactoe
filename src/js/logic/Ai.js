@@ -11,7 +11,6 @@ class Ai {
 
   }
 
-
   putMark(game) {
     this.evaluatePosition(game.board.boardArray)
   }

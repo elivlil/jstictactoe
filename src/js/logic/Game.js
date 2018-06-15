@@ -24,15 +24,6 @@ class Game {
       throw new Error("Game ended");
     }
   }
-
-  copy(){
-    let gameCopy = new Game(this.size);
-    let boardCopy;
-    this.board.boardArray.forEach((e)=>{boardCopy.push([...e])});
-    gameCopy.round=this.round;
-    gameCopy.board.boardArray=boardCopy;
-  }
-
 }
 
 
