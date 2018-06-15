@@ -8,4 +8,7 @@ function createResetButton() {
 function addWindowCloseListener(){
 	let closebtn = document.getElementsByClassName("close-btn")[0];
 	closebtn.addEventListener("click", () => window.close());
+  if(!(window && window.process && window.process.type)){
+    closebtn.style.display = "none";
+  }
 }

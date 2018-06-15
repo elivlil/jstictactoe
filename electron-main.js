@@ -1,7 +1,7 @@
 const {app, BrowserWindow} = require('electron')
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 800, height: 700, frame: false})
+  mainWindow = new BrowserWindow({width: 675, height: 700, frame: false})
   mainWindow.loadFile('index.html')
   mainWindow.on('closed', function () {mainWindow = null})
 }
