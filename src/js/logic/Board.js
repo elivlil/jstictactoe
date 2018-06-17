@@ -1,3 +1,10 @@
+class Position {
+  constructor(row, col) {
+    this.row = row;
+    this.col = col;
+  }
+}
+
 class Board {
   constructor(size) {
     this.size = size;

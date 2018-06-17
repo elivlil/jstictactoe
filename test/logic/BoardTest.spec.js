@@ -192,7 +192,6 @@ describe('Board:', () => {
       let iterator = board.getEmptyPositions();
       for(let e of expectedOutput) {
         let f=iterator.next().value;
-        console.log(f);
         expect(f).toEqual(e);
       }
     });
