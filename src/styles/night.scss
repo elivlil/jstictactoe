@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Encode+Sans:400,700');
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Encode Sans";
+  font-size: 12pt;
+  color:$color_greyc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 1em;
+  font-family: "Lobster";
+  color: $color_asc4;
+}
+strong{
+  color: $color_asc4;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 3rem 1fr 4rem;
+  grid-template: "h h h" "s e t" "g g g" "b b b";
+  background: no-repeat center/100% url("https://images.unsplash.com/photo-1528295674080-a70f6cbf4ff0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fb346b8087ea2347919b45826c7409bb&auto=format&fit=crop&w=3755&q=80");
+}
+
+.header {
+  width: 100%;
+  grid-area: h;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: $color_blackT;
+  -webkit-app-region: drag;
+
+  .close-btn {
+    display:block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    -webkit-app-region: no-drag;
+    width: 2rem;
+    cursor: pointer;
+    &:hover {
+      color: $color-white;
+    }
+  }
+}
+
+.timer {
+  grid-area: t;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+
+.game-event {
+  grid-area: e;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+
+.score {
+  grid-area: s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+
+.game {
+  grid-area: g;
+  display: grid;
+  grid-template-rows: $width_cell $width_cell $width_cell;
+  grid-template-columns: $width_cell $width_cell $width_cell;
+  grid-gap: 2px;
+  padding: 1em;
+  justify-content: center;
+  .game__cell {
+    width: $width_cell;
+    height: $width_cell;
+    cursor: pointer;
+    background-color: $color_purpleT;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    &:hover {
+      background-color: $color_asc4;
+    }
+  }
+}
+
+.button-holder {
+  grid-area: b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .new-round, .reset {
+    width: 6rem;
+    height: 3rem;
+    padding: 1rem;
+    text-align: center;
+    background: $color_greyT;
+    border-radius: 3px;
+    color: $color_whiteT;
+    cursor: pointer;
+    &:hover {
+      background-color:  $color_asc4;
+      color: $color-smokeywhite;
+    }
+  }
+}
+
