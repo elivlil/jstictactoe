@@ -1,22 +1,29 @@
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TicTacToe</title>
   <link rel="stylesheet" href="src/styles/mini.css">
+  <script src="src/js/dom/Timer.js"></script>
+  <script src="src/js/dom/DomManipulation.js"></script>
+  <script src="src/js/logic/Ai.js"></script>
+  <script src="src/js/logic/Board.js"></script>
+  <script src="src/js/logic/Game.js"></script>
+  <script src="src/js/logic/Player.js"></script>
+  <script src="src/js/dom/GameClient.js"></script>
+  <script src="main.js"></script>
 </head>
 
 <body class="body">
-<!--  <div class="title-bar">
+  <!--  <div class="title-bar">
            <div class="close-btn">&times;</div>
  </div>-->
   <header class="header">
     <div class="close-btn">&times;</div>
     <h1 class="header__title">TicTacToe</h1>
   </header>
-
   <div class="game-event"></div>
-
   <main class="game">
     <div class="game__cell" data-row="0" data-col="0"></div>
     <div class="game__cell" data-row="0" data-col="1"></div>
@@ -28,21 +35,13 @@
     <div class="game__cell" data-row="2" data-col="1"></div>
     <div class="game__cell" data-row="2" data-col="2"></div>
   </main>
-    <div class="timer"></div>
-    <div class="score"></div>
-    <div class="button-holder">
-      <div class="new-round">Replay</div>
-      <div class="reset">Reset</div>
-    </div>
+  <div class="timer"></div>
+  <div class="score"></div>
+  <div class="button-holder">
+    <div class="new-round">Replay</div>
+    <div class="reset">Reset</div>
+  </div>
   
-  <script src="src/js/dom/Timer.js"></script>
-  <script src="src/js/dom/DomManipulation.js"></script>
-<script src="src/js/logic/Ai.js"></script>
-  <script src="src/js/logic/Board.js"></script>
-  <script src="src/js/logic/Game.js"></script>
-  <script src="src/js/logic/Player.js"></script>
-  <script src="src/js/dom/GameClient.js"></script>
-  <script src="main.js"></script>
-
 </body>
+
 </html>

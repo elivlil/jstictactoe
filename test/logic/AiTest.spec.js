@@ -5,7 +5,7 @@ describe('Ai:', () => {
     game = new Game(3);
   });
   describe('evaluatePosition(game,x,y)', () => {
-    it('should return -10 if Ai loses in any child scenario', () => {
+    it('should return -10*game.weight if Ai loses in any child scenario', () => {
       game.play(0, 2);
       game.play(0, 0);
       game.play(0, 1);
@@ -15,7 +15,7 @@ describe('Ai:', () => {
       game.play(2, 2);
       game.play(2, 1);
       ai = new Ai(game);
-      expect(ai.evaluatePosition(game)).toEqual(-10);
+      expect(ai.evaluatePosition(game)).toEqual(-100);
     });
     it('should return 0 if the AI would draw in all child scenarios', () => {
       game.play(0, 2);
@@ -29,7 +29,7 @@ describe('Ai:', () => {
       ai = new Ai(game);
       expect(ai.evaluatePosition(game)).toEqual(0);
     });
-    it('should return 10 if the AI would win in any child scenarios', () => {
+    it('should return 10*(10-game.weight) if the AI would win in any child scenarios', () => {
       game.play(0, 1);
       game.play(0, 0);
       game.play(1, 0);
