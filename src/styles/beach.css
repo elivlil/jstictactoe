@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lobster|Encode+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Galada|Encode+Sans:400,700");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,7 +15,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   padding: 1em;
-  font-family: "Lobster";
+  font-family: "Galada";
   color: #B769AE;
 }
 
