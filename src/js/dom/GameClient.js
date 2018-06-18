@@ -98,7 +98,7 @@ class GameClient {
       this.clearBoard();
       this.game = new Game(3);
       this.timer = new Timer();
-      this.gameEvent.innerHTML = `${this.playerx.name} is up!`;
+      this.gameEvent.innerHTML = ``;
     }
   }
 
