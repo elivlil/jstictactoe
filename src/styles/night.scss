@@ -11,6 +11,8 @@ html {
   font-family: "Encode Sans";
   font-size: 12pt;
   color:$color_greyc;
+  background: no-repeat center url("https://images.unsplash.com/photo-1528295674080-a70f6cbf4ff0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fb346b8087ea2347919b45826c7409bb&auto=format&fit=crop&w=3755&q=80");
+  background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,7 +29,6 @@ strong{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto 3rem 1fr 4rem;
   grid-template: "h h h" "s e t" "g g g" "b b b";
-  background: no-repeat center/100% url("https://images.unsplash.com/photo-1528295674080-a70f6cbf4ff0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fb346b8087ea2347919b45826c7409bb&auto=format&fit=crop&w=3755&q=80");
 }
 
 .header {

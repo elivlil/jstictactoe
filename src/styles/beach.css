@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster|Encode+Sans:400,700');
-@import 'variables';
-
+@import url("https://fonts.googleapis.com/css?family=Lobster|Encode+Sans:400,700");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,7 +8,7 @@
 html {
   font-family: "Encode Sans";
   font-size: 12pt;
-  color:$color_white;
+  color: #fff;
   background: no-repeat center url("https://images.unsplash.com/photo-1495419597644-19934b6b7c40?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=48ebf80c604249ae9c8c0fcfcb6d8216&auto=format&fit=crop&w=3750&q=80");
   background-size: cover;
 }
@@ -18,10 +16,11 @@ html {
 h1, h2, h3, h4, h5, h6 {
   padding: 1em;
   font-family: "Lobster";
-  color: $color_asc4;
+  color: #B769AE;
 }
-strong{
-  color: $color_asc4;
+
+strong {
+  color: #B769AE;
 }
 
 .body {
@@ -29,7 +28,6 @@ strong{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto 3rem 1fr 4rem;
   grid-template: "h h h" "s e t" "g g g" "b b b";
-
 }
 
 .header {
@@ -38,22 +36,21 @@ strong{
   display: flex;
   justify-content: center;
   align-content: center;
-  background-color: $color_whiteT;
+  background-color: rgba(255, 255, 255, 0.5);
   -webkit-app-region: drag;
-
-  .close-btn {
-    display:block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    font-size: 2rem;
-    -webkit-app-region: no-drag;
-    width: 2rem;
-    cursor: pointer;
-    &:hover {
-      color: $color-white;
-    }
-  }
+}
+.header .close-btn {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  -webkit-app-region: no-drag;
+  width: 2rem;
+  cursor: pointer;
+}
+.header .close-btn:hover {
+  color: #fff;
 }
 
 .timer {
@@ -84,23 +81,23 @@ strong{
 .game {
   grid-area: g;
   display: grid;
-  grid-template-rows: $width_cell $width_cell $width_cell;
-  grid-template-columns: $width_cell $width_cell $width_cell;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
   grid-gap: 2px;
   padding: 1em;
   justify-content: center;
-  .game__cell {
-    width: $width_cell;
-    height: $width_cell;
-    cursor: pointer;
-    background-color: $color_purpleT;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    &:hover {
-      background-color: $color_asc4;
-    }
-  }
+}
+.game .game__cell {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: rgba(132, 94, 194, 0.5);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.game .game__cell:hover {
+  background-color: #B769AE;
 }
 
 .button-holder {
@@ -108,19 +105,20 @@ strong{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  .new-round, .reset {
-    width: 6rem;
-    height: 3rem;
-    padding: 1rem;
-    text-align: center;
-    background: $color_whiteT;
-    border-radius: 3px;
-    color: $color_blackT;
-    cursor: pointer;
-    &:hover {
-      background-color:  $color_asc4;
-      color: $color-smokeywhite;
-    }
-  }
+}
+.button-holder .new-round, .button-holder .reset {
+  width: 6rem;
+  height: 3rem;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.button-holder .new-round:hover, .button-holder .reset:hover {
+  background-color: #B769AE;
+  color: #f7f7f7;
 }
 
+/*# sourceMappingURL=beach.css.map */
