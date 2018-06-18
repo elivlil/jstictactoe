@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Encode+Sans:400,700");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Encode Sans";
+  font-size: 12pt;
+  color: #ccc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 1em;
+  font-family: "Lobster";
+  color: #B769AE;
+}
+
+strong {
+  color: #B769AE;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 3rem 1fr 4rem;
+  grid-template: "h h h" "s e t" "g g g" "b b b";
+  background: no-repeat center/100% url("https://images.unsplash.com/photo-1528295674080-a70f6cbf4ff0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fb346b8087ea2347919b45826c7409bb&auto=format&fit=crop&w=3755&q=80");
+}
+
+.header {
+  width: 100%;
+  grid-area: h;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-app-region: drag;
+}
+.header .close-btn {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  -webkit-app-region: no-drag;
+  width: 2rem;
+  cursor: pointer;
+}
+.header .close-btn:hover {
+  color: #fff;
+}
+
+.timer {
+  grid-area: t;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+
+.game-event {
+  grid-area: e;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+
+.score {
+  grid-area: s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+
+.game {
+  grid-area: g;
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 2px;
+  padding: 1em;
+  justify-content: center;
+}
+.game .game__cell {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: rgba(132, 94, 194, 0.5);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.game .game__cell:hover {
+  background-color: #B769AE;
+}
+
+.button-holder {
+  grid-area: b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.button-holder .new-round, .button-holder .reset {
+  width: 6rem;
+  height: 3rem;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.button-holder .new-round:hover, .button-holder .reset:hover {
+  background-color: #B769AE;
+  color: #f7f7f7;
+}
+
+/*# sourceMappingURL=night.css.map */
