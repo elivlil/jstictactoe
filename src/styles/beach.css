@@ -36,8 +36,9 @@ strong {
   display: flex;
   justify-content: center;
   align-content: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(248, 248, 255, 0.5);
   -webkit-app-region: drag;
+  border-bottom: 1px dotted ghostwhite;
 }
 .header .close-btn {
   display: block;
@@ -112,7 +113,7 @@ strong {
   height: 3rem;
   padding: 1rem;
   text-align: center;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(248, 248, 255, 0.5);
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;

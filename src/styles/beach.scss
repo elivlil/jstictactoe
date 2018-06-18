@@ -40,7 +40,7 @@ strong{
   align-content: center;
   background-color: $color_whiteT;
   -webkit-app-region: drag;
-
+  border-bottom: 1px dotted ghostwhite;
   .close-btn {
     display:block;
     position: fixed;
