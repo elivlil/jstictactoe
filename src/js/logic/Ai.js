@@ -10,7 +10,7 @@ class Ai {
 
     }
     if (game.currentMark() === "o") {
-      let bestValue = -1000;
+      let bestValue = -Infinity;
       let iterator = game.board.getEmptyPositions();
       let nextEmptyPosition = iterator.next();
       while (!nextEmptyPosition.done) {
@@ -24,7 +24,7 @@ class Ai {
       }
       return bestValue;
     } else {
-      let bestValue = 1000;
+      let bestValue = Infinity;
       let iterator = game.board.getEmptyPositions();
       let nextEmptyPosition = iterator.next();
       while (!nextEmptyPosition.done) {

@@ -32,25 +32,26 @@ class GameClient {
       try {
         this.game.play(row, col);
         target.innerHTML =
-      `<svg>
+          `<svg>
           <line x1="20" x2="80" y1="20" y2="80" stroke="#fff" stroke-width="3"/>
           <line x1="80" x2="20" y1="20" y2="80" stroke="#fff" stroke-width="3"/>
           </svg>`;
+        //Immediately calls Ai player to move
+        if (this.checkGameStatus()) {
+          let ai = new Ai(this.game);
+          let move = ai.getMove();
+          let x = move.pos.row;
+          let y = move.pos.col;
+          this.game.play(x, y);
+          this.drawO(this.gameCells[x * 3 + y]);
+          // this.writeEvent();
+        }
       } catch (e) {
         console.log("Game ended");
       }
       this.writeEvent();
     }
-    //Immediately calls Ai player to move
-    if (this.checkGameStatus()) {
-      let ai = new Ai(this.game);
-      let move = ai.getMove();
-      let x = move.pos.row;
-      let y = move.pos.col;
-      this.game.play(x, y);
-      this.drawO(this.gameCells[x*3+y]);
-      this.writeEvent();
-    }
+
   }
 
   drawX(target) {
